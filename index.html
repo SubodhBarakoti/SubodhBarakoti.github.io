@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portofolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+    padding: 0%;
+    margin: 0%;
+}
+
+
+
+/* loading screen  */
+#loading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color:rgba(0,255,191,1);
+}
+/* loading screen  */
+
+
+
+/* background slanting line  */
+#main{
+    height: 50vh;
+    width: 100%;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,255,191,1) 0%, rgba(0,212,255,1) 100%);
+    position: relative;
+    z-index: 1;
+}
+  #main :after {
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,255,191,1) 0%, rgba(0,212,255,1) 100%);
+    bottom: -140px;
+    content: '';
+    display: block;
+    height: 50%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: skewY(5deg);
+    transform-origin: 100%;
+    z-index: -1;
+  }
+
+  #portfolio{
+      text-align: center;
+      font-size: 3em;
+  }
+
+
+  /* background slanting line  */
+
+
+  /* personal card  */
+#template{
+    background: linear-gradient(90deg, rgba(0,255,239,1) 0%, rgba(195,255,206,0.8270658605238971) 100%);
+    width: 80%;
+    margin:5vh 10%;
+
+}
+#main #profileImage{
+    margin: 4.5vh 3%;
+    border-radius: 10px;
+}
+#main #profileInfo{
+    float: right;
+    width: 39%;
+    padding: 10vh 0;
+    text-align: center;
+}
+p{
+    font-family: cursive;
+    font-size: 1.25em;
+}
+u{
+    font-family: cursive;
+    font-size: 1em;
+    padding-top: 4em;
+}
+#fullName{
+    font-size: 2em;
+    font-weight: bold;
+    padding-bottom: 4vh;
+}
+#bio{
+    font-size: 1.5em;
+    padding-bottom: 3vh;
+}
+#followerCount{
+    padding-bottom: 2vh;
+}
+
+
+
+/* social links  */
+#socialLink{
+    text-align: center;
+}
+#githubLink{
+    font-size: 40px;
+    color: #6e6e6e;
+}
+#githubLink:hover{
+    color: #211F1F;
+}
+#twitterLink{
+    font-size: 40px;
+    color: #61c1fd;
+}
+#twitterLink:hover{
+    color: #1DA1F2;
+}
+#emailLink{
+    font-size: 40px;
+    color: rgb(226, 215, 215);
+}
+#emailLink:hover{
+    color: rgb(187, 187, 187);
+}
+
+
+/* social links  */
+
+/* personal card  */
+
+
+
+/* repository  */
+
+#reposDivision{
+min-height: 30vh;
+width: 100%;
+text-align: center;
+}
+
+
+#reposDivision a{
+    text-decoration: none;
+    color: black;
+}
+
+.repo{
+    min-height: 20vh;
+    width: 15%;
+    text-align: center;
+    background:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,255,191,1) 0%, rgba(0,212,255,1) 100%) ;
+    padding-top: 11vh;
+    font-size: 1em;
+    display: inline-block;
+    margin: 1vh 2.5%;
+}
+.repo:hover{
+    background: linear-gradient(90deg, rgba(0,255,239,1) 0%, rgba(195,255,206,0.8270658605238971) 100%) ;
+}
+/* repository */
+
+
+@media only screen and (max-width:775px){
+    #main #profileImage{
+        width: 94%;
+        margin: 10vh 3%;
+    }
+    #main #profileInfo{
+        width: 100%;
+        background:linear-gradient(90deg, rgba(0,255,239,1) 0%, rgba(195,255,206,0.8270658605238971) 100%);
+    }
+    #reposDivision{
+        text-align: center;
+        overflow: hidden;
+    }
+    .repo{
+        margin: 1vh 25%;
+        display: block;
+        width: 50%;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div id="loading">
+        <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+        <span class="sr-only">Loading...</span>
+    </div>
+
+
+
+    <main id="main" hidden>
+        <h1 id="portfolio">My Portfolio</h1>
+        <div id="template">
+            <img id="profileImage" width="55%">
+            <div id="profileInfo">
+                <p>Hello Everyone. I am <p id="fullName"></p></p>
+                <u>Github Bio:</u>
+                <p id="bio"></p>
+                <u>Github Followers:</u>
+                <p id="followerCount"></p>
+                <u>Socials:</u>
+                <div id="socialLink">
+                    <a id="githubLink"><i class="fa fa-github" aria-hidden="true"></i></a>
+                    <a id="twitterLink"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a id="emailLink" href="mailto:subodhbarakoti17@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div> 
+        
+        <div id="reposDivision">
+            <u id="topic">Github Projects:</u><br><br>
+            <p>Some resporitories are forked.</p>
+            <a id="firstrepoLink">
+                <p id="firstrepo" class="repo">
+
+                </p>
+            </a>
+            <a id="secondrepoLink">
+                <p  id="secondrepo" class="repo">
+
+                </p>
+            </a>
+            <a id="thirdrepoLink">
+                <p id="thirdrepo" class="repo">
+
+                </p>
+            </a>
+        </div>
+    </main>
+    <script>
+       fetch("https://api.github.com/users/SubodhBarakoti")
+        .then(response=>response.json())
+        .then(function(data){
+            // console.log(data)
+            
+            document.getElementById("profileImage").src = data["avatar_url"]
+            document.getElementById("fullName").textContent = data["name"]
+
+
+            document.getElementById("bio").textContent = data["bio"]
+
+
+            document.getElementById("followerCount").textContent =  data["followers"]
+
+
+
+            document.getElementById("githubLink").href = data["html_url"]
+
+
+            let twittername=data["twitter_username"]
+            let twitterLname=`https:\\www.twitter.com/${twittername}`
+            document.getElementById("twitterLink").href = twitterLname
+
+
+
+
+
+            // let email=data["email"]
+            // let mailemail=`mailto:${email}`
+            // document.getElementById("emailLink").href= mailemail
+            
+        })
+        fetch("https://api.github.com/users/SubodhBarakoti/repos") 
+        .then(response=>response.json())
+        .then(function(data){
+            console.log(data)
+            
+            document.getElementById("firstrepoLink").href=data[0]["html_url"]
+            document.getElementById("firstrepo").textContent=data[0]["name"]
+
+
+            document.getElementById("secondrepoLink").href=data[1]["html_url"]
+            document.getElementById("secondrepo").textContent=data[1]["name"]
+
+            document.getElementById("thirdrepoLink").href=data[2]["html_url"]
+            document.getElementById("thirdrepo").textContent=data[2]["name"]
+
+
+            document.getElementById("main").hidden=false
+            document.getElementById("loading").hidden=true
+           
+        })
+    </script>
+</body>
+</html>
