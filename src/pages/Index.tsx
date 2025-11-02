@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { ThemeProvider } from "next-themes";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { MouseWaveEffect } from "@/components/MouseWaveEffect";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { SkillsSection } from "@/components/sections/SkillsSection";
@@ -25,7 +27,9 @@ const Index = () => {
   return (
     <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
       <div className="relative">
+        <MouseWaveEffect />
         <ThemeToggle />
+        <ScrollToTop />
         
         <main>
           <HeroSection onContactClick={handleContactClick} />
