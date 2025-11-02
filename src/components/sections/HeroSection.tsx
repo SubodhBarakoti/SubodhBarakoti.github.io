@@ -7,7 +7,7 @@ interface HeroSectionProps {
 
 export function HeroSection({ onContactClick }: HeroSectionProps) {
   const handleDownloadCV = () => {
-    window.open("/cv.pdf", "_blank");
+    window.open("assets/cv.pdf", "_blank");
   };
 
   return (
