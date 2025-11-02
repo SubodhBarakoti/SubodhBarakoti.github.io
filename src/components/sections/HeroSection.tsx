@@ -22,10 +22,6 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Software Engineer specializing in scalable web applications and integrations
           </p>
-          <p className="text-lg text-muted-foreground flex items-center justify-center gap-2">
-            <span className="inline-block w-2 h-2 rounded-full bg-neon animate-pulse"></span>
-            Based in Kathmandu, Nepal
-          </p>
         </div>
 
         <div className="flex flex-wrap gap-4 justify-center items-center pt-4">

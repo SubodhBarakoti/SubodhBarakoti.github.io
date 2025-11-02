@@ -15,7 +15,7 @@ export function AboutSection() {
         <Card className="p-8 md:p-12 bg-card/50 backdrop-blur-sm border-border hover:card-glow transition-all duration-300">
           <p className="text-lg leading-relaxed text-foreground/90 mb-8">
             I'm a dedicated Software Engineer with expertise in full-stack development, 
-            specializing in .NET Core, React, and Python. With a proven track record of 
+            specializing in .NET Core, React, Angular and Python. With a proven track record of 
             delivering enterprise-level applications, I focus on creating robust, scalable 
             solutions that drive business value.
           </p>
